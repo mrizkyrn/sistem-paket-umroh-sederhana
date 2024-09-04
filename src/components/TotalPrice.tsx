@@ -7,7 +7,6 @@ interface TotalPriceProps {
 }
 
 const TotalPrice: React.FC<TotalPriceProps> = ({ formData }) => {
-  console.log(formData);
   return (
     <div className="bg-white p-4 rounded-lg shadow-md">
       <h1 className="text-2xl font-semibold mb-4">Total Harga</h1>

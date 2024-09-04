@@ -77,7 +77,7 @@ const calculateTotalPrice = (formData: FormData) => {
         (formData.jumlahPax * formData.tourLeader))
       : 0;
 
-  const marginPrice = formData.margin || 0;
+  const marginPrice = Number(formData.margin);
 
   const totalPrice =
     pesawatPrice +

@@ -19,30 +19,32 @@ import TotalPrice from './TotalPrice';
 import { FormData } from '../types';
 import Summary from './Summary';
 
+const initialFormData: FormData = {
+  periode: '',
+  berangkat: '',
+  vendorHotel: '',
+  jumlahPax: 1,
+  pesawat: '',
+  madinah: '',
+  hariMadinah: 0,
+  makkah: '',
+  hariMakkah: 0,
+  visaBus: '',
+  transportasi: '',
+  muthawwif: '',
+  handlingSaudi: '',
+  domestik: '',
+  siskopatuh: '',
+  perlengkapan: '',
+  wisataPlus: '',
+  manasik: '',
+  tourLeader: 0,
+  margin: 0,
+};
+
 const ProductForm: React.FC = () => {
   const [showSummary, setShowSummary] = useState(false);
-  const [formData, setFormData] = useState<FormData>({
-    periode: '',
-    berangkat: '',
-    vendorHotel: '',
-    jumlahPax: 1,
-    pesawat: '',
-    madinah: '',
-    hariMadinah: 0,
-    makkah: '',
-    hariMakkah: 0,
-    visaBus: '',
-    transportasi: '',
-    muthawwif: '',
-    handlingSaudi: '',
-    domestik: '',
-    siskopatuh: '',
-    perlengkapan: '',
-    wisataPlus: '',
-    manasik: '',
-    tourLeader: 0,
-    margin: 0,
-  });
+  const [formData, setFormData] = useState<FormData>(initialFormData);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -78,6 +80,8 @@ const ProductForm: React.FC = () => {
   };
 
   const handleSubmit = () => {
+    setFormData(initialFormData);
+
     alert('Data berhasil disimpan');
     setShowSummary(false);
   };

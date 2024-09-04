@@ -152,8 +152,8 @@ const Summary: React.FC<SummaryProps> = ({ formData, onSubmit, onCancel }) => {
           <p>Rp{calculationPrices(formData).marginPrice.toLocaleString()}</p>
         </div>
         <div className="flex justify-between mb-2">
-          <p>Total</p>
-          <p>Rp{calculationPrices(formData).totalPrice.toLocaleString()}</p>
+          <p><strong>Total</strong></p>
+          <p><strong>Rp{calculationPrices(formData).totalPrice.toLocaleString()}</strong></p>
         </div>
 
         <div className="flex justify-between mt-4">
