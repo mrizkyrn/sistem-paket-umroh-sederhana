@@ -18,7 +18,6 @@ import {
 import TotalPrice from './TotalPrice';
 import { FormData } from '../types';
 import Summary from './Summary';
-import { product } from '../data/db';
 
 const ProductForm: React.FC = () => {
   const [showSummary, setShowSummary] = useState(false);
@@ -79,34 +78,6 @@ const ProductForm: React.FC = () => {
   };
 
   const handleSubmit = () => {
-    const dataObject = {
-      ...formData,
-      totalPrice: 0,
-    };
-    product.push(dataObject);
-    setFormData({
-      periode: '',
-      berangkat: '',
-      vendorHotel: '',
-      jumlahPax: 1,
-      pesawat: '',
-      madinah: '',
-      hariMadinah: 0,
-      makkah: '',
-      hariMakkah: 0,
-      visaBus: '',
-      transportasi: '',
-      muthawwif: '',
-      handlingSaudi: '',
-      domestik: '',
-      siskopatuh: '',
-      perlengkapan: '',
-      wisataPlus: '',
-      manasik: '',
-      tourLeader: 0,
-      margin: 0,
-    });
-    
     alert('Data berhasil disimpan');
     setShowSummary(false);
   };
