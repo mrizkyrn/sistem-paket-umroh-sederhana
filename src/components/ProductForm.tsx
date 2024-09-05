@@ -88,7 +88,7 @@ const ProductForm: React.FC = () => {
 
   return (
     <div>
-      <form onSubmit={handleContinue} className="p-6 bg-white rounded shadow-md w-[800px]">
+      <form onSubmit={handleContinue} className="p-6 w-full mx-auto bg-white rounded shadow-md max-w-[800px]">
         <div className="flex flex-col md:flex-row gap-5 mb-10 items-center">
           <div className="w-full md:w-1/2 flex flex-col gap-3">
             {/* Periode */}

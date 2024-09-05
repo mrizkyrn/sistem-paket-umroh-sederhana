@@ -11,7 +11,7 @@ interface SummaryProps {
 const Summary: React.FC<SummaryProps> = ({ formData, onSubmit, onCancel }) => {
   return (
     <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-900 bg-opacity-70">
-      <div className="bg-white p-6 rounded-lg shadow-md w-[600px] h-[600px] overflow-y-auto">
+      <div className="bg-white p-6 mx-10 rounded-lg shadow-md w-[600px] h-[600px] overflow-y-auto">
         <h1 className="text-2xl font-semibold mb-4">Ringkasan</h1>
         <div className="flex justify-between mb-2">
           <p>Periode</p>
